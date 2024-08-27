@@ -10,27 +10,106 @@
 }
 
 .navbar {
-  border-radius: 0.5rem; /* Arredonda os cantos da navbar */
-  overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites arredondados */
+  border-radius: 0.5rem; 
+  overflow: hidden; 
 }
 
-/* Estilo para o botão de toggle da navbar (quando visto em dispositivos móveis) */
 .navbar-toggler {
-  border-radius: 0.25rem; /* Arredonda os cantos do botão de toggle */
+  border-radius: 0.25rem; 
 }
 
-/* Estilo para os links da navbar */
 .navbar-nav .nav-link {
-  color: black; /* Define a cor do texto dos links como preto */
-  border-radius: 0.25rem; /* Arredonda os cantos dos links */
+  color: black; 
+  border-radius: 0.25rem; 
 }
 
-/* Estilo para o menu suspenso */
 .dropdown-menu {
-  border-radius: 0.5rem; /* Arredonda os cantos do menu suspenso */
+  border-radius: 0.5rem; 
 }
 
-/* Estilo para os itens do menu suspenso */
 .dropdown-menu .dropdown-item {
-  border-radius: 0.25rem; /* Arredonda os cantos dos itens do menu suspenso */
+  border-radius: 0.25rem; 
+}
+
+body {
+  background-color: #e0e0e0;
+  text-align: center;
+  padding: 0; 
+}
+
+.countdown {
+  background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; 
+  margin: 0;
+}
+
+.text-content {
+  text-align: left;
+  flex-basis: auto;
+}
+
+#timer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  font-size: 2rem;
+  margin: 0;
+  flex-basis: auto;
+}
+
+#timer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+#timer span {
+  font-size: 2rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+#shopNow {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: flex-start;
+  position: relative;
+  left: 0;
+  clear: both;
+}
+
+.image-container {
+  max-width: 200px;
+  margin-left: 10px;
+  align-self: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: transparent;
+}
+
+.completionOfPromotion {
+  margin-top: 10px;
+  font-size: 0.625rem;
+  color: #fff;
 }
