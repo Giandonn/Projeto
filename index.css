@@ -16,3 +16,95 @@ html, body {
   .footer {
     margin-top: auto;
   }
+
+  .button-wrapper {
+    border: 1px solid rgb(146, 146, 146);
+    border-radius: 50px;
+    width: 100%;
+    background-color: gray;
+    padding: 0px;
+    display: inline-block;
+    transition: border-color 0.3s ease;
+}
+
+.btn-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffff;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffff;
+    color: #111;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.arrow-icon i {
+    font-size: 16px;
+}
+.email-input-box {
+    background-color: #3a3a3a;
+    border-radius: 30px;
+    padding: 5px 15px;
+    width: 350px;
+}
+
+.email-input {
+    background-color: transparent; /* Torna a caixa transparente */
+    border: none;
+    color: #fff;
+    flex-grow: 1;
+    outline: none;
+    padding-left: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de cor */
+}
+
+.email-input::placeholder {
+    color: #b5b5b5;
+}
+
+.email-input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.email-input:focus {
+    background-color: transparent;
+    color: #fff; 
+    box-shadow: none;
+}
+
+.btn-circle {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.btn-circle i {
+    color: #000000;
+}
+
+.bi-arrow-right i {
+    color: black;
+}
