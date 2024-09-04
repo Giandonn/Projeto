@@ -15,7 +15,7 @@
   .icon-container svg {
     width: 20px; 
     height: 20px;
-    fill: black; 
+    fill: black; /* Ajuste a cor do ícone conforme necessário */
   }  
 
 body {
