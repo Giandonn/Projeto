@@ -60,16 +60,14 @@
   overflow: hidden;
 }
 
-/* Imagens iniciais */
 .image1 {
-  background: url('/Projeto/midia/Fone_preto.png') no-repeat center / cover;
+  background: url('/imgs/Fone_preto.png') no-repeat center / cover;
 }
 
 .image2 {
-  background: url('/Projeto/midia/Fone_rosa.png') no-repeat center / cover;
+  background: url('/imgs/Fone_rosa.png') no-repeat center / cover;
 }
 
-/* Elemento interno para a transição suave */
 .image::after {
   content: '';
   position: absolute;
@@ -80,18 +78,17 @@
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  transition: opacity 0.5s ease-in-out; /* Transição suave de opacidade */
-  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; 
 }
 
-/* Configuração das imagens de hover */
 .image1::after {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0.5) 100%
     ),
-    url('/Projeto/midia/Fone_preto2.jpg') no-repeat center / 100% 100%;
+    url('/imgs/Fone_preto2.jpg') no-repeat center / 100% 100%;
 }
 
 .image2::after {
@@ -100,10 +97,9 @@
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0.5) 100%
     ),
-    url('/Projeto/midia/Fone_rosa2.png') no-repeat center / 100% 100%;
+    url('/imgs/Fone_rosa2.png') no-repeat center / 100% 100%;
 }
 
-/* Efeito hover para transição de imagem */
 .image:hover::after {
-  opacity: 1; /* Torna a imagem de hover visível suavemente */
+  opacity: 1;
 }
