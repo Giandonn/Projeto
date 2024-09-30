@@ -1,7 +1,13 @@
 .container {
-    height: 916px;
     flex-shrink: 0;
     border-radius: 30px;
+}
+
+#headphones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .testimonial-container {
