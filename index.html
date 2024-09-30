@@ -10,93 +10,14 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="navbar_footer.css">
   <link href="index.css" rel="stylesheet" />
+  <link href="./components/newpriceCard/newpriceCard.css" rel="stylesheet">
+  <link href="./components/countdownCard/cardCountdown.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="content">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-radius: 0.25rem;">
-      <div class="container-fluid">
-        <img style="padding-left: 90px;" src="img/Logo (2).png" alt="">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mx-auto" style="font-size: 13px;">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" style="color: black; margin-left: 200px;">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: black;">SALE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: black;">BUNDLE & SAVE</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
-                SHOP BY CATEGORY
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: black;">SUPPORT</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item d-none d-lg-block">
-              <a class="nav-link" href="#" style="color: lightskyblue; font-size: 13px;">SIGN UP FOR FREE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: black; font-size: 13px;">SIGN UP</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container my-5">
-      <div class="countdown">
-        <div class="text-content">
-          <h1>Save 20% or more on Headset</h1>
-          <p>Enjoy for a limited time</p>
-          <div id="timer">
-            <div>
-              <span id="hours"></span>
-              <div class="label">Hours</div>
-            </div>
-            <div>
-              <span id="minutes"></span>
-              <div class="label">Minutes</div>
-            </div>
-            <div>
-              <span id="seconds"></span>
-              <div class="label">Seconds</div>
-            </div>
-          </div>
-          <button id="shopNow" class="btn btn-dark">
-            SHOP NOW
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-              <path
-                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-            </svg>
-          </button>
-          <p class="completionOfPromotion">Ends 18/08. Restrictions apply. See details.</p>
-        </div>
-        <div class="image-container">
-          <img src="/img/Headset.PNG" alt="Headset">
-        </div>
-      </div>
-    </div>
-
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    <div id="navbar"></div>
+    <div id="component-container"></div>
 
     <div class="container">
       <div class="two-card-box">
@@ -105,141 +26,19 @@
       </div>
     </div>
 
-    <footer class="footer py-5" style="background-color: #000000; border-radius: 0.25rem;">
-      <div class="container">
-        <img style="padding-bottom: 50px;" src="img/Logo.png" alt="">
-        <div class="row">
-          <div class="col-6 col-md-2 mb-3">
-            <h5>Menu</h5>
-            <ul class="nav flex-column" style="margin-top: 20px;">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">About Us</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Product</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Pricing</a></li>
-            </ul>
-          </div>
+    <div class="countdown"></div>
+    <div id="footer"></div>
 
-          <div class="col-6 col-md-2 mb-3">
-            <h5>Resources</h5>
-            <ul class="nav flex-column" style="margin-top: 20px;">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Forum</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Support</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Partners</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Events</a></li>
-            </ul>
-          </div>
-
-          <div class="col-6 col-md-2 mb-3">
-            <h5>My Account</h5>
-            <ul class="nav flex-column" style="margin-top: 20px;">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">My Orders</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">FAQ</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Sales conditions</a>
-              </li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Contact</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0" style="color: lightgray;">Legal mentions</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-12 col-md-6 mb-3">
-            <h4>Subscribe to Newsletter</h4>
-            <p>Sign up for exclusive offers, original stories, events, and more.</p>
-            <div class="email-input-box d-flex">
-              <input type="email" class="form-control email-input" placeholder="Email Address"
-                aria-label="Email Address">
-              <button class="btn btn-circle">
-                <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-          <p>© 2024 Gabini Headset Store, Inc. All rights reserved.</p>
-          <span><a href="" style="color: lightgray;">PRODUCTS</a></span>
-          <span><a href="" style="color: lightgray;">PRIVACY POLICY</a></span>
-          <span><a href="" style="color: lightgray;">CUSTOMER SERVICE</a></span>
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3">
-              <a class="link-body-emphasis icon-container" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px"
-                  y="0px" width="50" height="50" viewBox="0 0 50 50" style="" class="icon icons8-Facebook-Filled">
-                  <path
-                    d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z">
-                  </path>
-                </svg>
-              </a>
-            </li>
-
-            <li class="ms-3">
-              <a class="link-body-emphasis icon-container" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
-                </svg>
-              </a>
-            </li>
-
-            <li class="ms-3">
-              <a class="link-body-emphasis icon-container" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-linkedin" viewBox="0 0 16 16">
-                  <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                </svg>
-              </a>
-            </li>
-
-            <li class="ms-3">
-              <a class="link-body-emphasis icon-container" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-instagram" viewBox="0 0 16 16">
-                  <path
-                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                </svg>
-              </a>
-            </li>
-
-            <li class="ms-3">
-              <a class="link-body-emphasis icon-container" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
-                </svg>
-              </a>
-            </li>
-
-            <li class="ms-3">
-              <a class="link-body-emphasis icon-container" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-pinterest" viewBox="0 0 16 16">
-                  <path
-                    d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0" />
-                </svg>
-              </a>
-            </li>
-
-            <li class="ms-3">
-              <a class="link-body-emphasis icon-container" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-spotify"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
   </div>
-
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Yn1zP7Lmk4J4uGz8s0H4rxhXJ8+7C6K8Q5rG3JvQeRJ/X8xQGF5ldTQqBfmEefJeG"
     crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+
 </body>
 
 </html>
