@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const selectedColor = button.getAttribute('data-img');
 
-            if (selectedColor === 'img/red.png') {
+            if (selectedColor === 'midia/red.png') {
                 pinkImg.style.transform = 'translateY(0)';
                 redImg.style.transform = 'translateY(100%)';
             } else {
