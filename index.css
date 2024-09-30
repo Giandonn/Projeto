@@ -10,29 +10,25 @@
 }
 
 .navbar {
-  border-radius: 0.5rem; /* Arredonda os cantos da navbar */
-  overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites arredondados */
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-/* Estilo para o botão de toggle da navbar (quando visto em dispositivos móveis) */
 .navbar-toggler {
-  border-radius: 0.25rem; /* Arredonda os cantos do botão de toggle */
+  border-radius: 0.25rem;
 }
 
-/* Estilo para os links da navbar */
 .navbar-nav .nav-link {
-  color: black; /* Define a cor do texto dos links como preto */
-  border-radius: 0.25rem; /* Arredonda os cantos dos links */
+  color: black;
+  border-radius: 0.25rem;
 }
 
-/* Estilo para o menu suspenso */
 .dropdown-menu {
-  border-radius: 0.5rem; /* Arredonda os cantos do menu suspenso */
+  border-radius: 0.5rem;
 }
 
-/* Estilo para os itens do menu suspenso */
 .dropdown-menu .dropdown-item {
-  border-radius: 0.25rem; /* Arredonda os cantos dos itens do menu suspenso */
+  border-radius: 0.25rem;
 }
 
 .two-card-box {
@@ -79,24 +75,20 @@
   background-position: center;
   border-radius: 20px;
   transition: opacity 0.5s ease-in-out;
-  opacity: 0; 
+  opacity: 0;
 }
 
 .image1::after {
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
+      rgba(0, 0, 0, 0.5) 100%),
     url('/imgs/Fone_preto2.jpg') no-repeat center / 100% 100%;
 }
 
 .image2::after {
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
+      rgba(0, 0, 0, 0.5) 100%),
     url('/imgs/Fone_rosa2.png') no-repeat center / 100% 100%;
 }
 
@@ -115,7 +107,7 @@
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
-  margin: 500px 0 0; /* Ajuste a margem superior para empurrar o card para baixo */
+  margin: 500px 0 0;
 }
 
 
@@ -135,7 +127,7 @@
   font-size: 2rem;
   margin: 0;
   flex-basis: auto;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 #timer div {
@@ -191,24 +183,24 @@
 
 @media (max-width: 768px) {
   #timer {
-    font-size: 1.5rem; 
-    justify-content: center; 
+    font-size: 1.5rem;
+    justify-content: center;
   }
 
   .image-container {
-    max-width: 150px; 
+    max-width: 150px;
     margin: 10px 0;
   }
 
   #shopNow {
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
     padding: 6px 12px;
   }
 }
 
 @media (max-width: 480px) {
   #timer {
-    font-size: 1.25rem; 
+    font-size: 1.25rem;
     gap: 10px;
   }
 
@@ -221,4 +213,3 @@
     padding: 5px 10px;
   }
 }
-
