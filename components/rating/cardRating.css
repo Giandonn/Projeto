@@ -1,16 +1,7 @@
-body {
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    margin-top: 10vh;
-}
-
 .container {
-    width: 1400px;
     height: 916px;
     flex-shrink: 0;
     border-radius: 30px;
-    background: #F3F5F9;
 }
 
 .testimonial-container {
@@ -20,6 +11,8 @@ body {
     gap: 30px;
     padding: 8px 8px 80px 8px;
     background: #F3F5F9;
+    border-radius: 30px;
+
 }
 
 .testimonial-card {
@@ -74,25 +67,6 @@ body {
 }
 
 
-.testimonial-title {
-    color: black;
-    font-size: 36px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    line-height: 44px;
-    word-wrap: break-word;
-}
-
-.testimonial-description {
-    width: 676px;
-    text-align: center;
-    color: #767A85;
-    font-size: 18px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    line-height: 28px;
-    word-wrap: break-word;
-}
 
 .stars {
     display: flex;
@@ -186,7 +160,7 @@ body {
     margin-left: 24px;
     align-items: flex-start;
     gap: 8px;
-    border-radius: 30px;
+    border-radius: 100px;
     background: var(--Black-black-500, #000);
 }
 
