@@ -26,3 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     loadComponent('./components/rating/cardRating.html', 'rating');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    loadComponent('./components/foneChangeColor/index.html', 'foneChangeColor');
+});
