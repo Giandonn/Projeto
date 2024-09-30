@@ -8,34 +8,37 @@
     height: 40px;
     border-radius: 50%;
     background-color: white;
-    border: 2px solid #ddd; 
-    overflow: hidden; 
-  }
-  
-  .icon-container svg {
-    width: 20px; 
+    border: 2px solid #ddd;
+    overflow: hidden;
+}
+
+.icon-container svg {
+    width: 20px;
     height: 20px;
-    fill: black; /* Ajuste a cor do ícone conforme necessário */
-  }  
+    fill: black;
+}
 
 body {
     font-family: 'Inter', sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
-  }
-  .content {
+}
+
+.content {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  .footer {
-    margin-top: auto;
-  }
+}
 
-  .button-wrapper {
+.footer {
+    margin-top: auto;
+}
+
+.button-wrapper {
     border: 1px solid rgb(146, 146, 146);
     border-radius: 50px;
     width: 100%;
@@ -76,6 +79,7 @@ html, body {
 .arrow-icon i {
     font-size: 16px;
 }
+
 .email-input-box {
     background-color: #3a3a3a;
     border-radius: 30px;
@@ -84,7 +88,7 @@ html, body {
 }
 
 .email-input {
-    background-color: transparent; 
+    background-color: transparent;
     border: none;
     color: #fff;
     flex-grow: 1;
@@ -104,7 +108,7 @@ html, body {
 
 .email-input:focus {
     background-color: transparent;
-    color: #fff; 
+    color: #fff;
     box-shadow: none;
 }
 
