@@ -1,0 +1,116 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.hero-section {
+    margin-top: 2rem;
+}
+
+.store-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.see-details-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    border: 2px solid #000;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.see-details-btn:hover {
+    border-color: #000;
+    color: #fff;
+    background-color: #000;
+}
+
+.arrow-circle {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.info {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.stars i {
+    font-size: 1.1rem;
+}
+
+.reviews {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.purchased-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.purchased-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.headphone-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.headphone-image {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.badge {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.warranty {
+    top: 15%;
+    right: 10%;
+}
+
+.battery {
+    bottom: 15%;
+    left: 10%;
+}
