@@ -1,118 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Cadastro</title>
-    <style>
-        body {
-            background-color: #343a40;
-            /* Fundo escuro */
-            color: #ffffff;
-            /* Texto claro */
-        }
-
-        .container {
-            background-color: #495057;
-            /* Cor do fundo do formulário */
-            border-radius: 5px;
-            padding: 2rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            max-width: 800px;
-            /* Largura máxima do formulário */
-            margin: auto;
-            /* Centraliza o formulário na tela */
-        }
-
-        .form-control {
-            max-width: 100%;
-            /* Largura total dos campos */
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            /* Cor do botão */
-            border-color: #007bff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-            /* Cor do botão ao passar o mouse */
-            border-color: #0056b3;
-        }
-    </style>
+    <title>GABINI - Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cadastro.css">
 </head>
 
 <body>
-    <div class="container mt-5">
-        <h2 class="mb-4 text-center">Cadastre-se</h2>
-        <form>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="inputNome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="inputNome" required>
-                </div>
-                <div class="col">
-                    <label for="inputSobrenome" class="form-label">Sobrenome</label>
-                    <input type="text" class="form-control" id="inputSobrenome" required>
-                </div>
+    <div class="logo">GABINI</div>
+    <div class="overlay"></div>
+
+    <div class="container d-flex flex-column align-items-center min-vh-100 justify-content-center position-relative">
+        <div class="text-center mb-4">
+            <div class="profile-icon mx-auto mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" class="bi bi-person"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4-3a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM2 13s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2zm1.643-1c.209-.73 1.21-2 6.357-2 5.147 0 6.148 1.27 6.357 2H3.643z" />
+                </svg>
             </div>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="inputIdade" class="form-label">Idade</label>
-                    <input type="number" class="form-control" id="inputIdade" required>
+            <p class="text-white">Foto de perfil</p>
+        </div>
+
+        <div class="form-container text-white">
+            <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Nome</label>
+                        <input type="text" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Sobrenome</label>
+                        <input type="text" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Idade</label>
+                        <input type="number" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Número de telefone</label>
+                        <input type="tel" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Senha</label>
+                        <input type="password" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Confirmar Senha</label>
+                        <input type="password" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">CEP</label>
+                        <input type="text" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Cidade</label>
+                        <input type="text" class="form-control text-black">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Estado</label>
+                        <input type="text" class="form-control text-black">
+                    </div>
                 </div>
-                <div class="col">
-                    <label for="inputTelefone" class="form-label">Número de Telefone</label>
-                    <input type="tel" class="form-control" id="inputTelefone" required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
-                </div>
-                <div class="col">
-                    <label for="inputPassword" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="inputPassword" required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="inputConfirmPassword" class="form-label">Confirmar Senha</label>
-                    <input type="password" class="form-control" id="inputConfirmPassword" required>
-                </div>
-                <div class="col">
-                    <label for="inputCep" class="form-label">CEP</label>
-                    <input type="text" class="form-control" id="inputCep" required>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="inputCidade" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="inputCidade" required>
-                </div>
-                <div class="col">
-                    <label for="inputEstado" class="form-label">Estado</label>
-                    <input type="text" class="form-control" id="inputEstado" required>
-                </div>
-                <div class="mb-3 text-center">
-                    <label for="inputFoto" class="form-label">Foto</label>
-                    <input type="file" class="form-control" id="inputFoto" accept="image/*" required>
-                    <div class="form-text">Escolha uma imagem para o seu perfil.</div>
-                </div>
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
-            </div>
-        </form>
+            </form>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-custom">Cadastrar</button>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-5sZ8a1WlO4eU07Rv1O4r1Dg8O0BgR70IkF9Q8l3dIg4mbbS1I9BRLkGE0bFJ8VHt"
-        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
