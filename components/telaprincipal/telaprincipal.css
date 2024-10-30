@@ -108,9 +108,13 @@ body {
 .warranty {
     top: 15%;
     right: 10%;
+    background-color: white;
+    color: #848484 !important;
 }
 
 .battery {
-    bottom: 15%;
+    bottom: 20%;
     left: 10%;
+    background-color: white;
+    color: #848484 !important;
 }
