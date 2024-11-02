@@ -93,7 +93,9 @@ body {
 
 .headphone-image {
     max-width: 100%;
-    border-radius: 15px; 
+    border-radius: 15px;
+    z-index: 2;
+    position: relative; 
 }
 
 .badge {
@@ -135,7 +137,14 @@ body {
     left: -26%; 
     transform: rotate(27deg); 
     z-index: 1;
-} 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
 
 .barra-diagonal2 {
     width: 38%;
@@ -146,4 +155,33 @@ body {
     left: 87%; 
     transform: rotate(-27deg); 
     z-index: 1;
-} 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.barra-diagonal1::before
+ {
+    content: "YOUR TEXT HERE   YOUR TEXT HERE   YOUR TEXT HERE   YOUR TEXT HERE";
+    position: absolute;
+    animation: moveText 4s linear infinite;
+    white-space: nowrap;
+}
+.barra-diagonal2::before {
+    content: "YOUR TEXT HERE YOUR TEXT HERE YOUR TEXT HERE YOUR TEXT HERE";
+    position: absolute;
+    animation: moveText 5s linear infinite;
+    white-space: nowrap;
+}
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
