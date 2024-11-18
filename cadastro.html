@@ -30,44 +30,48 @@
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label">Nome</label>
-                        <input type="text" class="form-control text-black" id="inputNome">
+                        <input type="text" maxlength="60" class="form-control text-black" id="inputNome" required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Sobrenome</label>
-                        <input type="text" class="form-control text-black" id="inputSobrenome">
+                        <input type="text" maxlength="60" class="form-control text-black" id="inputSobrenome" required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Idade</label>
-                        <input type="date" class="form-control text-black" id="inputIdade">
+                        <input type="date" class="form-control text-black" id="inputIdade" required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Número de telefone</label>
-                        <input type="tel" class="form-control text-black" id="inputTelefone">
+                        <input type="tel" maxlength="11" class="form-control text-black" id="inputTelefone" required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Email</label>
-                        <input type="email" class="form-control text-black" id="inputEmail">
+                        <input type="email" maxlength="255" class="form-control text-black" id="inputEmail" required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Senha</label>
-                        <input type="password" class="form-control text-black" id="inputPassword">
+                        <input type="password" maxlength="15" class="form-control text-black" id="inputPassword" required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Confirmar Senha</label>
-                        <input type="password" class="form-control text-black" id="inputConfirmPassword">
+                        <input type="password" maxlength="15" class="form-control text-black" id="inputConfirmPassword" required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">CEP</label>
-                        <input type="text" class="form-control text-black" id="inputCep">
+                        <input type="text" maxlength="8" class="form-control text-black" id="inputCep" required>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Cidade</label>
-                        <input type="text" class="form-control text-black" id="inputCidade">
+                        <label for="inputEstado" class="form-label">Estado</label>
+                        <select id="inputEstado" class="form-select" required>
+                            <option value="">Selecione o estado</option>
+                        </select>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Estado</label>
-                        <input type="text" class="form-control text-black" id="inputEstado">
-                    </div>
+                        <label for="inputCidade" class="form-label">Cidade</label>
+                        <select id="inputCidade" class="form-select" disabled required>
+                            <option value="">Por favor, Selecione um Estado</option>
+                        </select>
+                    </div>                    
                 </div>
                 <div class="text-center mt-4">
                     <p>Já possui uma conta? <strong><a href="./login.html">Entrar</a></strong></p>
@@ -81,7 +85,59 @@
         integrity="sha384-5sZ8a1WlO4eU07Rv1O4r1Dg8O0BgR70IkF9Q8l3dIg4mbbS1I9BRLkGE0bFJ8VHt"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
+
+        const selectStates = document.querySelector('#inputEstado');
+        const selectCities = document.querySelector('#inputCidade');
+
+        function getEstados() {
+        fetch('https://brasilapi.com.br/api/ibge/uf/v1')
+        .then(res => res.json())
+        .then(states => {
+            states.forEach(state => {
+                const option = document.createElement('option');
+                option.setAttribute('value', state.sigla);
+                option.textContent = state.nome;
+                selectStates.appendChild(option);
+            });
+        })
+        .catch(err => console.error('Erro ao carregar estados:', err));
+    }
+
+    function getCidades() {
+        selectStates.addEventListener('change', () => {
+
+        selectCities.innerHTML = '<option value="">Selecione a cidade</option>';
+
+            const state = selectStates.value;
+
+            if (state === "") {
+                selectCities.setAttribute('disabled', true);
+            } else {
+                selectCities.removeAttribute('disabled');
+
+                fetch(`https://brasilapi.com.br/api/ibge/municipios/v1/${state}`)
+                    .then(res => res.json())
+                    .then(cities => {
+                        cities.forEach(city => {
+                            const option = document.createElement('option');
+                            option.setAttribute('value', city.nome);
+                            option.textContent = city.nome;
+                            selectCities.appendChild(option);
+                        });
+                    })
+                    .catch(err => console.error('Erro ao carregar cidades:', err));
+            }
+        });
+    }
+
+
+    window.onload = function () {
+        getEstados();
+        getCidades();
+    }
+
         document.getElementById('registerForm').addEventListener('submit', async function (event) {
             event.preventDefault();
 
