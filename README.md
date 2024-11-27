@@ -1,20 +1,21 @@
-<h1>Projeto Gabini</h1>
+# Projeto Gabini
 
-<h3>Descrição Geral</h3>
-<p>O Projeto Gabini foi desenvolvido utilizando as tecnologias HTML, CSS e JavaScript. Além disso, a biblioteca Bootstrap foi empregada para facilitar a criação de componentes visuais responsivos e consistentes.</p>
+## Descrição Geral
+O **Projeto Gabini** foi desenvolvido utilizando as tecnologias **HTML**, **CSS** e **JavaScript**, com o objetivo de criar uma aplicação web responsiva e funcional. Para aprimorar a experiência de desenvolvimento e garantir consistência visual, utilizamos a biblioteca **Bootstrap**, que facilitou a criação de componentes modernos e responsivos.
 
-<h3>Estrutura do Projeto</h3>
-<p>O projeto foi cuidadosamente dividido em várias partes, com cada colaborador responsável por uma tarefa específica, organizada e distribuída através do Trello. Enquanto alguns componentes já estão completos e funcionando conforme o esperado, outros ainda estão em fase de desenvolvimento e ajustes.</p>
+## Estrutura do Projeto
+A organização do projeto foi cuidadosamente planejada para maximizar a eficiência da equipe. As tarefas foram distribuídas entre os colaboradores por meio da ferramenta **Trello**, permitindo uma gestão clara e objetiva das atividades. Cada integrante foi responsável por uma parte específica do desenvolvimento, promovendo um trabalho colaborativo e bem estruturado.
 
-<h3>Versão Atual</h3>
-<p>Atualmente, estamos na versão 1 (V1) do projeto, e algumas animações e funcionalidades ainda não foram implementadas. Esses detalhes serão corrigidos e aprimorados na versão 2 (V2), que também incluirá a integração completa com o backend, em desenvolvimento, algumas partes do JavaScript ja esta rodando, nao esta 100%, mas ja esta funcionando.</p>
+## Versão Atual
+Estamos orgulhosos de apresentar a **versão final** do Projeto Gabini, que mantém fidelidade total ao design elaborado no **Figma**. Todo o layout e as funcionalidades foram implementados de maneira a atender às expectativas e garantir uma solução eficaz e visualmente atraente.
 
-<h3>Como Rodar</h3>
-<p>Usando o Windows, siga os seguintes passos:</p>
-<ul>
-  <li>1. Baixe o projeto.</li> 
-  <li>2. Abra o seu Visual Studio Code.</li>
-  <li>3. Certifique-se de que a extensão LIVE SERVER esta instalada (caso não estiver, sera necessario instalar)</li>
-  <li>4. Se tiver instalado, clicar no botão inferior direito para dar inicio ao projeto</li>
-  <li>5. Pronto, projeto rodando</li>
-</ul>
+## Como Rodar
+Siga os passos abaixo para executar o projeto em um ambiente Windows:
+
+1. Faça o download do repositório para o seu computador.  
+2. Abra o **Visual Studio Code**.  
+3. Certifique-se de que a extensão **Live Server** está instalada. Caso ainda não tenha essa extensão, será necessário instalá-la.  
+4. Com a extensão instalada, clique no botão **"Go Live"** no canto inferior direito do VS Code para iniciar o servidor local.  
+5. Pronto! O projeto estará rodando no seu navegador padrão.  
+
+Esperamos que o Projeto Gabini seja útil e que você tenha uma experiência agradável explorando suas funcionalidades.
