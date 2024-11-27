@@ -189,7 +189,7 @@ span {
 }
 
 .line1 {
-    z-index: -2;
+    z-index: -1;
     width: 120%;
     right: -30%;
     top: 300px;
@@ -200,7 +200,7 @@ span {
     top: 300px;
     z-index: -1;
     width: 80%;
-    right: -45%;
+    right: -42%;
     transform: rotate(-25deg);
 }
 
@@ -576,7 +576,7 @@ h1 {
     border-radius: 30px;
     right: 5%;
     position: relative;
-    background-image: url(https://enricosotelo.github.io/img/Rectangle34624248.svg);
+    background-image: url(./imgs/svgs/rectangle.svg);
     background-size: cover;
     width: 34rem;
     height: 35.79rem;
@@ -841,7 +841,7 @@ h1 {
         width: 100%;
         background-repeat: no-repeat;
         height: 100%;
-        background-image: url(https://enricosotelo.github.io/img/Texture.svg);
+        background-image: url(./imgs/svgs/texture.svg);
         opacity: 0.7;
     }
 
@@ -995,7 +995,6 @@ h1 {
 
 .nex {
 
-    background: #000;
 
     img {
         rotate: 180deg;
@@ -1187,4 +1186,13 @@ h1 {
     display: inline-block;
     width: 0.9ch;
     text-align: center;
+}
+
+.jblHeadphone {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
