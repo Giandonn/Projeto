@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="logo"><a href="./index.html" style="color: inherit; text-decoration: none;">GABINI</a></div>
+    <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">GABINI</a></div>
     <div class="overlay"></div>
 
     <div class="container d-flex flex-column align-items-center min-vh-100 justify-content-center position-relative">
@@ -168,7 +168,7 @@
             try {
                 const response = await axios.post('http://localhost:5000/api/Usuario', userData);
                 console.log(response.data);
-                window.location.href = 'http://127.0.0.1:5501/';
+                window.location.href = 'http://127.0.0.1:5502/';
 
             } catch (error) {
                 console.error('Erro ao registrar:', error.response ? error.response.data : error.message);
