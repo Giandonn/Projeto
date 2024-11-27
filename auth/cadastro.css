@@ -1,5 +1,5 @@
 body {
-    background-image: url('imgs/cadastro/background.jpeg');
+    background-image: url('../imgs/cadastro/background.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@ body {
 }
 
 .form-container {
-    background-image: url('imgs/cadastro/background-card.jpeg');
+    background-image: url('../imgs/cadastro/background-card.jpeg');
     border-radius: 15px;
     padding: 30px;
     max-width: 700px;

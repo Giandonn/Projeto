@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GABINI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="../assets/styles/cadastro.css">
 </head>
 
 <body>
@@ -50,11 +50,13 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Senha</label>
-                        <input type="password" maxlength="15" class="form-control text-black" id="inputPassword" required>
+                        <input type="password" maxlength="15" class="form-control text-black" id="inputPassword"
+                            required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Confirmar Senha</label>
-                        <input type="password" maxlength="15" class="form-control text-black" id="inputConfirmPassword" required>
+                        <input type="password" maxlength="15" class="form-control text-black" id="inputConfirmPassword"
+                            required>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">CEP</label>
@@ -71,7 +73,7 @@
                         <select id="inputCidade" class="form-select" disabled required>
                             <option value="">Por favor, Selecione um Estado</option>
                         </select>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="text-center mt-4">
                     <p>Já possui uma conta? <strong><a href="./login.html">Entrar</a></strong></p>
@@ -92,51 +94,51 @@
         const selectCities = document.querySelector('#inputCidade');
 
         function getEstados() {
-        fetch('https://brasilapi.com.br/api/ibge/uf/v1')
-        .then(res => res.json())
-        .then(states => {
-            states.forEach(state => {
-                const option = document.createElement('option');
-                option.setAttribute('value', state.sigla);
-                option.textContent = state.nome;
-                selectStates.appendChild(option);
+            fetch('https://brasilapi.com.br/api/ibge/uf/v1')
+                .then(res => res.json())
+                .then(states => {
+                    states.forEach(state => {
+                        const option = document.createElement('option');
+                        option.setAttribute('value', state.sigla);
+                        option.textContent = state.nome;
+                        selectStates.appendChild(option);
+                    });
+                })
+                .catch(err => console.error('Erro ao carregar estados:', err));
+        }
+
+        function getCidades() {
+            selectStates.addEventListener('change', () => {
+
+                selectCities.innerHTML = '<option value="">Selecione a cidade</option>';
+
+                const state = selectStates.value;
+
+                if (state === "") {
+                    selectCities.setAttribute('disabled', true);
+                } else {
+                    selectCities.removeAttribute('disabled');
+
+                    fetch(`https://brasilapi.com.br/api/ibge/municipios/v1/${state}`)
+                        .then(res => res.json())
+                        .then(cities => {
+                            cities.forEach(city => {
+                                const option = document.createElement('option');
+                                option.setAttribute('value', city.nome);
+                                option.textContent = city.nome;
+                                selectCities.appendChild(option);
+                            });
+                        })
+                        .catch(err => console.error('Erro ao carregar cidades:', err));
+                }
             });
-        })
-        .catch(err => console.error('Erro ao carregar estados:', err));
-    }
-
-    function getCidades() {
-        selectStates.addEventListener('change', () => {
-
-        selectCities.innerHTML = '<option value="">Selecione a cidade</option>';
-
-            const state = selectStates.value;
-
-            if (state === "") {
-                selectCities.setAttribute('disabled', true);
-            } else {
-                selectCities.removeAttribute('disabled');
-
-                fetch(`https://brasilapi.com.br/api/ibge/municipios/v1/${state}`)
-                    .then(res => res.json())
-                    .then(cities => {
-                        cities.forEach(city => {
-                            const option = document.createElement('option');
-                            option.setAttribute('value', city.nome);
-                            option.textContent = city.nome;
-                            selectCities.appendChild(option);
-                        });
-                    })
-                    .catch(err => console.error('Erro ao carregar cidades:', err));
-            }
-        });
-    }
+        }
 
 
-    window.onload = function () {
-        getEstados();
-        getCidades();
-    }
+        window.onload = function () {
+            getEstados();
+            getCidades();
+        }
 
         document.getElementById('registerForm').addEventListener('submit', async function (event) {
             event.preventDefault();
